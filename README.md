@@ -3,6 +3,11 @@
 Base template using [FastAPI](https://fastapi.tiangolo.com/) and [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/).
 
 
+## Prerequisites
+* [Python 3.11](https://www.python.org/downloads/release/python-3110/)
+* [AWS Elastic Beanstalk CLI](https://docs.aws.amazon.com/elastic-beanstalk/index.html)
+
+
 ## Quick setup
 
 1. Create and activate [virtual environment](https://docs.python.org/3/library/venv.html):
@@ -31,4 +36,17 @@ make fmt
 To run the tests, run:
 ```bash
 make tests
+```
+
+## Building and Deployment
+
+First, we need to create an Elastic Beanstalk Application.
+```bash
+eb create
+```
+
+Now, we can create an Application environment:
+For deployment, run:
+```bash
+eb deploy
 ```
