@@ -1,6 +1,7 @@
 # fastapi-eb-template
-
 Base template using [FastAPI](https://fastapi.tiangolo.com/) and [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/).
+
+[![CI](https://github.com/andreyrcdias/fastapi-eb-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/andreyrcdias/fastapi-eb-template/actions/workflows/ci.yaml)
 
 
 ## Prerequisites
@@ -9,7 +10,6 @@ Base template using [FastAPI](https://fastapi.tiangolo.com/) and [AWS Elastic Be
 
 
 ## Quick setup
-
 1. Create and activate [virtual environment](https://docs.python.org/3/library/venv.html):
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
@@ -25,8 +25,8 @@ make install
 make run
 ```
 
-## Maintenance
 
+## Maintenance
 To format the code, run:
 ```bash
 make fmt
@@ -38,8 +38,8 @@ To run the tests, run:
 make tests
 ```
 
-## Building and Deployment
 
+## Building and Deployment
 First, we need to create an Elastic Beanstalk Application.
 ```bash
 eb create
