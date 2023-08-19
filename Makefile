@@ -11,4 +11,4 @@ run:
 
 .PHONY: tests
 tests:
-	pytest . -vvs --showlocals
+	pytest . -vvs --showlocals --color=yes
