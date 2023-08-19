@@ -40,13 +40,17 @@ make tests
 
 
 ## Building and Deployment
-First, we need to create an Elastic Beanstalk Application.
+First, we need to initialize the repository with:
 ```bash
-eb create
+eb init fastaspi-eb-template
 ```
 
-Now, we can create an Application environment:
+Now, we create an Elastic Beanstalk Application:
+```bash
+eb create fastaspi-eb-template
+```
+
 For deployment, run:
 ```bash
-eb deploy
+eb deploy fastapi-eb-template
 ```
