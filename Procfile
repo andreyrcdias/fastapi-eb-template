@@ -1,1 +1,1 @@
-web: uvicorn src.main:app --port 8000
+web: uvicorn src.server:app --port 8000
