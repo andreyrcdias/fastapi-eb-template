@@ -7,7 +7,7 @@ class HealthCheck(BaseModel):
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="fastapi-eb-poc", debug=True)
+    app = FastAPI(title="fastapi-eb-template", debug=True)
 
     @app.get(
         "/health",
