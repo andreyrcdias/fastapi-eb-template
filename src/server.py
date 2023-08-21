@@ -9,11 +9,6 @@ class HealthCheck(BaseModel):
 def create_app() -> FastAPI:
     app = FastAPI(title="fastapi-eb-poc", debug=True)
 
-    from pydantic import BaseModel
-
-    class HealthCheck(BaseModel):
-        status: str = "OK"
-
     @app.get(
         "/health",
         status_code=200,
