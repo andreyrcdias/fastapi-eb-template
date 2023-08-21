@@ -22,14 +22,16 @@ jobs:
             pip install -r requirements.txt
             pip install -r requirements-dev.txt
 
-        - name: Lint
-          run: make fmt
+        - uses: aws-actions/configure-aws-credentials@v2
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
-        - name: Tests
-          run: make tests
-
-        - name: Install EB CLI
-          run: pip install awsebcli
+        - name: Install AWS and AWS EB CLI
+          run: |
+            pip install --upgrade awscli
+            pip install --upgrade awsebcli
 
         - name: Deploy to Elastic Beanstalk
           run: |
