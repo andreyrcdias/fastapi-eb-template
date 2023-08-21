@@ -28,9 +28,8 @@ jobs:
             aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
-        - name: Install AWS and AWS EB CLI
+        - name: Install AWS EB CLI
           run: |
-            pip install --upgrade awscli
             pip install --upgrade awsebcli
 
         - name: Deploy to Elastic Beanstalk
