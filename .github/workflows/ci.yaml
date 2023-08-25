@@ -18,6 +18,7 @@ jobs:
 
         - name: Install dependencies
           run: |
+            # https://github.com/CircleCI-Public/aws-elastic-beanstalk-orb/issues/31
             pip install "pyyaml<5.4"
             pip install --upgrade pip
             pip install -r requirements.txt
@@ -32,6 +33,10 @@ jobs:
         - name: Install AWS EB CLI
           run: |
             pip install --upgrade awsebcli
+
+        - name: Init Elastic Beanstalk
+          run: |
+            eb init fastapi-eb-template
 
         - name: Deploy to Elastic Beanstalk
           run: |
